@@ -1,0 +1,38 @@
+body {
+    background-color: #eee; 
+
+}
+
+p { 
+    width: 
+    100px; border: black 1px solid; 
+    margin: 2px; 
+}
+
+.parent {
+    background-image: url(https://blogging-techies.com/wp-content/uploads/2020/07/1593643453_57_Descargar-52-fondos-de-pantalla-blancos-limpios-para-computadoras-de.jpg);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    direction: rtl;
+    justify-content: space-evenly;
+}
+
+.child {
+    margin: 0;
+    padding: 10px;
+    border-radius: 0.55em;
+    border: solid 0.1em red;
+}
+
+.child-one {
+    background-color: rgb(200, 223, 219);
+}
+
+.child-two {
+    background-color: rgb(143, 155, 144);
+}
+
+.child-three {
+    background-color:rgb(198, 223, 223);
+}
