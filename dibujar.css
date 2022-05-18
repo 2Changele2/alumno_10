@@ -1,12 +1,13 @@
 body {
-    background-color: #eee; 
+    background-color: #eee;
 
 }
 
-p { 
-    width: 
-    100px; border: black 1px solid; 
-    margin: 2px; 
+p {
+    width:
+        100px;
+    border: black 1px solid;
+    margin: 2px;
 }
 
 .parent {
@@ -18,8 +19,8 @@ p {
     justify-content: space-evenly;
 }
 
-.cuerpo{
-    background-color:chartreuse;
+.cuerpo {
+    background-color: chartreuse;
     padding: 100px;
 
 }
@@ -29,7 +30,7 @@ p {
     padding: 10px;
     border-radius: 0.55em;
     border: solid 0.1em red;
-    
+
 }
 
 .child-one {
@@ -41,5 +42,22 @@ p {
 }
 
 .child-three {
-    background-color:rgb(200, 223, 219);
+    background-color: rgb(200, 223, 219);
+}
+
+.el-lista {
+    background-color: black;
+    color: white;
+}
+
+.el-lista-par {
+
+    background-color: aqua;
+
+}
+
+.el-lista-impar {
+
+    background-color: blueviolet;
+
 }
