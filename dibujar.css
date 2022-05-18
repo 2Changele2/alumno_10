@@ -18,11 +18,19 @@ p {
     justify-content: space-evenly;
 }
 
+.cuerpo{
+    background-color:chartreuse;
+    padding: 100px;
+    text-align:;
+
+}
+
 .child {
     margin: 0;
     padding: 10px;
     border-radius: 0.55em;
     border: solid 0.1em red;
+    
 }
 
 .child-one {
@@ -30,9 +38,9 @@ p {
 }
 
 .child-two {
-    background-color: rgb(143, 155, 144);
+    background-color: rgb(200, 223, 219);
 }
 
 .child-three {
-    background-color:rgb(198, 223, 223);
+    background-color:rgb(200, 223, 219);
 }
