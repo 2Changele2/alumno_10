@@ -33,21 +33,23 @@ p {
 
 }
 
+
+.el-lista {
+    background-color: black;
+    color: blue;
+}
+
+
 .child-one {
     background-color: rgb(200, 223, 219);
 }
 
 .child-two {
-    background-color: rgb(200, 223, 219);
+    background-color: rgb(200, 223, 0);
 }
 
 .child-three {
-    background-color: rgb(200, 223, 219);
-}
-
-.el-lista {
-    background-color: black;
-    color: white;
+    background-color: rgb(0, 223, 219);
 }
 
 .el-lista-par {

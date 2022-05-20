@@ -1,54 +1,60 @@
 window.onload = function () {
+
+    var agregarTarea = function (tarea)
+    {
+        var nuevoItem = document.createElement("li");
+
+        nuevoItem.className = "el-lista"
+        switch (contador++ % 3)
+        {
+            case 0:
+                nuevoItem.classList.add("child-one");
+                break;
+            case 1:
+                nuevoItem.classList.add("child-two");
+                break;
+            case 2:
+                nuevoItem.classList.add("child-three");
+                break;
+            default:
+                break;
+        }
+
+
+        // Crea un nodo de texto
+        var nuevoContenido = document.createTextNode(tarea);
+        // Añade texto al elemento creado.
+        nuevoItem.appendChild(nuevoContenido);
+        // Añade el elemento creado y su contenido al DOM
+        currentUl.append(nuevoItem);
+    }
+    
     var contador = 0;
-    var btn = document.getElementById("add-task");
+    var add = document.getElementById("add-task");
+    var del = document.getElementById("delete-task");
     var areaTexto = document.getElementById("nueva-tarea");
-    var listaDesordenadaPar = document.getElementById("lista-rellenar");
-    var listaDesordenadaImpar = document.getElementById("lista-rellenar");
+    var currentUl = document.getElementById("current-ul");
+    var listaTareas = JSON.parse(localStorage.getItem('lista')) || [];
 
-    btn.onclick = function () {
-        contador++;
+    listaTareas.forEach(tarea => 
+    {
+        agregarTarea(tarea);   
+    });
 
-        var contadorClasifica = contador % 2;
-        var nuevoTexto = areaTexto.value;
+    add.onclick = function () 
+    {
+        agregarTarea(areaTexto.value);
+        listaTareas.push(areaTexto.value);
+        areaTexto.value = "";
+        localStorage.setItem('lista', JSON.stringify(listaTareas));
+    }
 
-        var nuevoItemListaPar = document.createElement("li");
-        var nuevoItemListaImpar = document.createElement("li");
-
-
-
-        var contenidoNuevoPar = document.createTextNode(nuevoTexto);
-        var contenidoNuevoImpar = document.createTextNode(nuevoTexto);
-
-
-
-        nuevoItemListaPar.className = "el-lista-par";
-        nuevoItemListaImpar.className = "el-lista-impar";
-
-
-        if (contadorClasifica == 0) 
-        {
-            nuevoItemListaPar.appendChild(contenidoNuevoPar);
-            listaDesordenadaPar.append(nuevoItemListaPar);
-
-        }
-        else
-        {
-            nuevoItemListaImpar.appendChild(contenidoNuevoImpar);
-            listaDesordenadaImpar.append(nuevoItemListaImpar);
-
-        }
-         
-
-
-        {
-            nuevoItemLista.appendChild(contenidoNuevo);
-            listaDesordenada.append(nuevoItemLista);
-
-        }
-
-
-
-
-
+    del.onclick = function ()
+    {
+        localStorage.clear(listaTareas);
+        currentUl.innerHTML = "";
+        // for (let child in currentUl) {
+        //     currentUl.remove(child)
+        // }
     }
 }
