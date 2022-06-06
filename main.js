@@ -32,6 +32,7 @@ window.onload = function () {
     var contador = 0;
     var add = document.getElementById("add-task");
     var del = document.getElementById("delete-task");
+    var del_individual = document.getElementById("delete-individual-task");
     var areaTexto = document.getElementById("nueva-tarea");
     var currentUl = document.getElementById("current-ul");
     var listaTareas = JSON.parse(localStorage.getItem('lista')) || [];
@@ -56,5 +57,12 @@ window.onload = function () {
         // for (let child in currentUl) {
         //     currentUl.remove(child)
         // }
+    }
+
+    del_individual.onclick = function()
+    {
+        localStorage.clear('li');
+        currentUl.innerHTML = "";
+
     }
 }
